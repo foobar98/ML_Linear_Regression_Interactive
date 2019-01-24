@@ -6,7 +6,7 @@ fig = plt.figure()
 x = np.array([])
 y = np.array([])
 rate = 0.0005       # learning rate (alpha)
-max_iter = 10000
+max_iter = 5000
 
 def draw(theta):
     y_guess = np.array([theta[0]+theta[1]*i for i in x])
@@ -21,7 +21,7 @@ def draw(theta):
     plt.plot(x,y_guess,'b')
 
     # Uncomment below line for simulation
-    # plt.pause(0.01)
+    #plt.pause(0.001)
     plt.draw()
 
 def gradientDescent():
@@ -48,7 +48,7 @@ def gradientDescent():
         theta[1] = theta[1]-rate*del1
 
         # Uncomment below line for simulation
-        # draw(theta)
+        #draw(theta)
         
     draw(theta)
 
